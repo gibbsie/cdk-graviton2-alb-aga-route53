@@ -32,7 +32,7 @@ class EC2Stack(core.Stack):
         self.instance = ec2.Instance(
             self,
             "CodeServerInstance",
-            instance_type=ec2.InstanceType("t4g.large"),
+            instance_type=ec2.InstanceType("m6g.xlarge"),
             machine_image=amzn_linux,
             block_devices=[ec2.BlockDevice(
                 device_name="/dev/xvda",
